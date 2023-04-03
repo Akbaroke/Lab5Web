@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Nama Class: Form
- * Deskripsi: CLass untuk membuat form inputan text sederhan
- **/
 class Form
 {
   private $fields = array();

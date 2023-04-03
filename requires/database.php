@@ -6,6 +6,7 @@ class Database
   protected $password;
   protected $db_name;
   protected $conn;
+  protected $title;
 
   public function __construct()
   {
@@ -14,7 +15,6 @@ class Database
     if ($this->conn->connect_error) {
       die("Connection failed: " . $this->conn->connect_error);
     }
-    echo $this->host;
   }
 
   private function getConfig()
@@ -38,6 +38,18 @@ class Database
     $sql = $sql->fetch_assoc();
     return $sql;
   }
+
+  public function getAll($table)
+  {
+    $sql = "SELECT * FROM " . $table;
+    $result = $this->conn->query($sql);
+    $data = array();
+    while ($row = $result->fetch_object()) {
+      $data[] = $row;
+    }
+    return $data;
+  }
+
 
   public function insert($table, $data)
   {

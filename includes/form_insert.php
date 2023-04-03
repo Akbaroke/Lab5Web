@@ -1,27 +1,22 @@
 <?php
 
-/**
- * Program memanfaatkan Program 10.2 untuk membuat form inputan sederhana.
- **/
-include "form.php";
-include "database.php";
+include "./requires/form.php";
+include "./requires/database.php";
 $db = new Database();
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['insert'])) {
   $data = [
     "nim" => $_POST['txtnim'],
     "nama" => $_POST['txtnama'],
     "alamat" => $_POST['txtalamat']
   ];
-  $db->insert("mahasiswa", $data);
+  $db->insert("tb_mahasiswa", $data);
 }
 
-echo "<html><head><title>Mahasiswa</title></head><body>";
-$form = new Form("form_input.php", "submit");
+$form = new Form("", "insert");
 $form->addField("txtnim", "Nim");
 $form->addField("txtnama", "Nama");
 $form->addField("txtalamat", "Alamat");
 echo "<h3>Silahkan isi form berikut ini :</h3>";
 $form->displayForm();
-echo "</body></html>";
