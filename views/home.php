@@ -12,7 +12,7 @@ foreach ($results as $result) {
 }
 ?>
 
-<button type="button" onclick="window.location.href='create'" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Tambah Data</button>
+<button type="button" onclick="window.location.href='create'" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Tambah Data</button>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -46,13 +46,13 @@ foreach ($results as $result) {
           <td class="px-6 py-4">
             <?= $row['nim'] ?>
           </td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-4 capitalize">
             <?= $row['nama'] ?>
           </td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-4 uppercase">
             <?= $row['kelas'] ?>
           </td>
-          <td class="px-6 py-4 text-right flex gap-2">
+          <td class="px-6 py-4 text-right flex gap-5">
             <a href="update/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
             <a href="delete/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
           </td>

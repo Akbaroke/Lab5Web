@@ -14,7 +14,7 @@ class Route
     } else if ($routeName == "") {
       require($this->config["home"]);
     } else {
-      require("404.php");
+      include_once "views/error.php";
     }
   }
 }

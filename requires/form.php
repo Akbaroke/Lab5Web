@@ -15,8 +15,10 @@ class Form
 
   public function displayForm()
   {
+    $url =
+      strpos(@$_REQUEST["url"], "/") ? str_split(@$_REQUEST["url"], strpos(@$_REQUEST["url"], "/"))[0] : @$_REQUEST['url'];
     echo "<form class='space-y-6' action='" . $this->action . "' method='POST'>";
-    echo "<h5 class='text-xl font-medium text-gray-900 dark:text-white'>Create Data</h5>";
+    echo "<h5 class='text-xl font-medium text-gray-900 dark:text-white capitalize'>" . $url . " Data</h5>";
     for ($j = 0; $j < count($this->fields); $j++) {
       echo "<div><label for='nama' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>" . $this->fields[$j]['label'] . "</label>";
       echo "<input type='text' value='" . $this->fields[$j]['value'] . "' name='" . $this->fields[$j]['name'] . "' class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='" . $this->fields[$j]['label'] . "' required>

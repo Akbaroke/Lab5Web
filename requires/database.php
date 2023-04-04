@@ -95,7 +95,7 @@ class Database
 
   public function delete($table, $filter)
   {
-    $sql = "DELETE FROM " . $table . " " . $filter;
+    $sql = "DELETE FROM " . $table . " WHERE " . $filter;
     $sql = $this->conn->query($sql);
     if ($sql == true) {
       return true;

@@ -15,7 +15,6 @@ if (isset($_POST['update'])) {
 }
 
 $data = $database->get("tb_mahasiswa", "id=" . $id);
-echo implode(" ", $data);
 
 $form = new Form("", "update");
 $form->addField("txtnim", "Nim", $data["nim"]);
