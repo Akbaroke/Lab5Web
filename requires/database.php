@@ -86,6 +86,8 @@ class Database
 
     $sql = "UPDATE " . $table . " SET " . $update_value . " WHERE " . $where;
     $sql = $this->conn->query($sql);
+    header('Location: home');
+
     if ($sql == true) {
       return true;
     } else {
