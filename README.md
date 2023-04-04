@@ -34,34 +34,34 @@
 ## **Directory Tree**
 ```bash
 Lab3Web
-│   .htaccess
-│   index.php
-│   lab5web.sql
-│   README.md
-│   route.php
+│   ├──.htaccess
+│   ├──index.php
+│   ├──lab5web.sql
+│   ├──README.md
+│   └──route.php
 │   
 ├───includes
-│       form_insert.php
-│       form_update.php
+│    ├──form_insert.php
+│    └──form_update.php
 │       
 ├───requires
-│       config.php
-│       database.php
-│       form.php
+│    ├──config.php
+│    ├──database.php
+│    └──form.php
 │       
 ├───screenshot
-│       About.png
-│       Contact.png
-│       Create.png
-│       Home.png
-│       Update.png
+│    ├──About.png
+│    ├──Contact.png
+│    ├──Create.png
+│    ├──Home.png
+│    └──Update.png
 │       
 └───views
-        about.php
-        contact.php
-        create.php
-        delete.php
-        error.php
-        home.php
-        update.php
+     ├──about.php
+     ├──contact.php
+     ├──create.php
+     ├──delete.php
+     ├──error.php
+     ├──home.php
+     └──update.php
 ```
