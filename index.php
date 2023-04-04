@@ -1,9 +1,13 @@
 <?php
 require_once "route.php";
-$moduleName = @$_REQUEST['url'];
+require_once "./requires/database.php";
+$moduleName =
+  strpos(@$_REQUEST["url"], "/") ? str_split(@$_REQUEST["url"], strpos(@$_REQUEST["url"], "/"))[0] : @$_REQUEST['url'];
 
 $url = [
-  "home" => "./views/home.php"
+  "home" => "./views/home.php",
+  "create" => "./views/create.php",
+  "update" => "./views/update.php"
 ];
 
 $routes = new Route($url);
@@ -54,7 +58,9 @@ $routes = new Route($url);
       </div>
     </div>
   </nav>
-  <?php $routes->load($moduleName); ?>
+  <div class="p-5">
+    <?php $routes->load($moduleName); ?>
+  </div>
 </body>
 
 </html>

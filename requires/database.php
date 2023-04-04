@@ -65,6 +65,7 @@ class Database
 
     $sql = "INSERT INTO " . $table . "(" . $columns . ") VALUES (" . $values . ")";
     $sql = $this->conn->query($sql);
+    header('Location: home');
 
     if ($sql == true) {
       return $sql;

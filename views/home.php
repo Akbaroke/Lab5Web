@@ -1,5 +1,4 @@
 <?php
-require "./requires/database.php";
 $db = new Database();
 $results = $db->getAll("tb_mahasiswa");
 
@@ -28,7 +27,7 @@ foreach ($results as $result) {
           Nama
         </th>
         <th scope="col" class="px-6 py-3">
-          Alamat
+          Kelas
         </th>
         <th scope="col" class="px-6 py-3">
           Action
@@ -51,11 +50,11 @@ foreach ($results as $result) {
             <?= $row['nama'] ?>
           </td>
           <td class="px-6 py-4">
-            <?= $row['alamat'] ?>
+            <?= $row['kelas'] ?>
           </td>
           <td class="px-6 py-4 text-right flex gap-2">
-            <a href="" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-            <a href="" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+            <a href="update/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+            <a href="delete/<?= $row['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
           </td>
         </tr>
       <?php
