@@ -34,6 +34,7 @@
 ## **Directory Tree**
 ```bash
 Lab3Web
+│   
 ├──.htaccess
 ├──index.php
 ├──lab5web.sql
