@@ -15,6 +15,9 @@ if (isset($_POST['update'])) {
 }
 
 $data = $database->get("tb_mahasiswa", "id=" . $id);
+if (!$data) {
+  header('Location: ../error');
+}
 
 $form = new Form("", "update");
 $form->addField("txtnim", "Nim", $data["nim"]);

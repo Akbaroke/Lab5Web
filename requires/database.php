@@ -34,8 +34,14 @@ class Database
   public function get($table, $where)
   {
     $sql = "SELECT * FROM " . $table . " WHERE " . $where;
-    $sql = $this->conn->query($sql);
-    $sql = $sql->fetch_assoc();
+    $result = $this->conn->query($sql);
+    if (!$result) {
+      return false;
+    }
+    $sql = $result->fetch_assoc();
+    if (!$sql) {
+      return false;
+    }
     return $sql;
   }
 
