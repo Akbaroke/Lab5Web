@@ -34,11 +34,11 @@
 ## **Directory Tree**
 ```bash
 Lab3Web
-│   ├──.htaccess
-│   ├──index.php
-│   ├──lab5web.sql
-│   ├──README.md
-│   └──route.php
+├──.htaccess
+├──index.php
+├──lab5web.sql
+├──README.md
+├──route.php
 │   
 ├───includes
 │    ├──form_insert.php
